@@ -1,7 +1,8 @@
-const express = require("express")
+const express = require("express");
+const authMiddleware = require("../auth");
 const router = express.Router();
 
-router.get("/list", (req, res) => {
+router.get("/list", authMiddleware, (req, res) => {
     const data = [{
         "title": "product1",
         "description": "this is product one"
