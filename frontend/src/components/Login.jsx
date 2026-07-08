@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { LOGIN_URL } from '../constants'
 
 
@@ -23,17 +23,23 @@ function Login(){
        }
     }
     return (
-        <>
-        <div className="form-group">
+       
+        <form>
+             <div className="form-group">
             <label htmlFor="email">E Mail</label>
             <input type="text" id="email" name="email" onChange={handleChange} />
-        </div>
-        <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password"  onChange={handleChange} />
-        </div>
-        <button type="button" onClick={handleLogin}>Login</button>
-        </>
+            </div>
+            <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" name="password"  onChange={handleChange} />
+            </div>
+            <button type="button" onClick={handleLogin}>Login</button>
+            <div>
+                <Link to="/signup">Don't have account? Register</Link>
+            </div>
+        </form>
+       
+        
     )
 }
 
