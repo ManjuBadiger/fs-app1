@@ -8,19 +8,19 @@ router.get("/list", authMiddleware, (req, res) => {
         "description": "this is product one"
     },
 {
-        "title": "product1",
+        "title": "product2",
         "description": "this is product one"
     },
 {
-        "title": "product1",
+        "title": "product3",
         "description": "this is product one"
     },
 {
-        "title": "product1",
+        "title": "product4",
         "description": "this is product one"
     },
 {
-        "title": "product1",
+        "title": "product5",
         "description": "this is product one"
     }]
 
